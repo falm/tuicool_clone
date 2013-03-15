@@ -1,0 +1,79 @@
+// Place all the styles related to the categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body.categories{
+.content{
+	margin:0px auto;
+	 width:940px;
+}
+.list_article {
+    margin-top:0px;
+    margin-left:0px;
+    clear:both;    
+}
+.single{    
+    overflow:hidden;    
+}
+.single .single_left{
+    float:left;
+    width:70%;
+}
+.article_title {
+    line-height: 1.2em; 
+    font-size:22px;     
+    margin: 10px 0 5px 0;
+}
+.article_cut{
+    line-height: 1.6em;
+    margin-bottom:10px;
+}
+.article_thumb{
+    float:right;
+    padding-top: 20px;
+}
+.article_thumb img{
+    height: 100px;
+    vertical-align: middle;    
+}
+.article_left{
+    float:left;
+    width:500px;
+    height:auto;
+}
+.article_title {
+    line-height: 1.2em; 
+    font-size:22px;     
+    margin: 10px 0 5px 0;
+}
+
+.article_cut{
+    line-height: 1.6em;
+    margin-bottom:10px;
+}
+.single{    
+    overflow:hidden;    
+}
+.single .single_left{
+    float:left;
+    width:70%;
+}
+.tip{
+    font-size:13px;
+    color:#777; 
+    border-bottom:1px solid #ccc;
+    margin-bottom: 3px;
+    padding-bottom: 3px;
+}
+.tip span{
+    margin-right:20px;    
+}
+.container-fluid { 
+    min-height: 400px;
+    margin-top: 40px;
+}
+.row-fluid{
+    margin-top: 20px;
+}
+
+}

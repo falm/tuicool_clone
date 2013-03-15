@@ -1,0 +1,42 @@
+#encoding: utf-8
+<table class="table table-bordered">
+	<%= form_for [:admin,article], class: 'form-horizontal' do |f| -%>
+	  
+	
+	<!--<tr><th><%= yield :title %></th></tr>-->
+	
+	<tr>
+		<td><%= f.label :title,'标题' %></td>
+		<td><%= f.text_field :title ,class: ''%></td>
+	</tr>
+	<tr>
+		<td><%= f.label :from, '来自', class: 'control-label' %></td>
+		<td><%= f.text_field :from %></td>
+	</tr>
+	<tr>
+		<td><%= f.label :link,'原文链接', class: 'control-label' %></td>
+		<td><%= f.text_field :link %></td>
+	</tr>
+	<tr>
+		<td><%= f.label :category,'分类', class: 'control-label' %></td>
+		<td>
+			<% categories_array = categories.map { |c| [c.name, c.id] } %>
+			<%= f.select :category_id, options_for_select(categories_array)  %>
+		</td>
+	</tr>
+	<tr>
+		<td><%= f.label :topic,'主题', class: 'control-label' %></td>
+		<td>
+			<% topics_array = topics.map { |t| [t.name, t.id] } %>
+			<%= f.select :topic_id, options_for_select(topics_array) %>
+		</td>
+	</tr>	
+	<tr>
+		<td><%= f.label :content,'内容', class: 'control-label' %></td>
+		<td><%= f.kindeditor :content, :width => 800, :height => 300 %></td>
+	</tr>		
+	<tr>
+		<td colspan="2"><%= f.submit '提交', class: 'btn' %></td>
+	</tr>				
+	<% end -%>
+</table>

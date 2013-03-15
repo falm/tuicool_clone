@@ -1,0 +1,139 @@
+// Place all the styles related to the topics controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body.topics{
+
+
+.topic_main {    
+    //height: 100%;
+    //max-height: 100%;
+    margin:0px auto; 
+    width:940px;
+    //margin-top:100px;
+    
+}
+
+.row-fluid{width:100%;*zoom:1;}.row-fluid:before,.row-fluid:after
+
+{display:table;content:"";}
+.row-fluid:after{clear:both;}
+#topic-list-container{
+    padding:10px 20px;
+    margin:0 0 20px 0;    
+}
+.sub-navbar, .sub-navbar a{
+    color: #555;
+    font-size: 15px;
+}
+#topic-list-container{
+    padding:10px 20px;
+    margin:0 0 20px 0;    
+}
+#tpcc{
+    display: none;
+}
+.need-padding{
+    display: none;
+}
+.topic-left{
+    width:18%;
+    height: 100%;    
+    float: left;
+    overflow: scroll;
+    border-right: 5px solid #ccc;
+}
+.topic-left .my-topics li a{
+    padding-left: 25px;
+}
+.topic-left .my-topics{
+    margin-bottom: 30px;
+}
+.topic-left .my-topics img{
+    width: 16px;
+}
+.topic-left .nav-list {
+    padding-right: 0;
+}
+.topic-left li{
+    line-height: 30px;
+    /*padding-left: 30px;*/
+    border-bottom: 1px solid #CCC;
+}
+.topic-left ul a{
+    margin-left: 0;
+    margin-right: 0;    
+    font-size: 13px;
+}
+.topic-right{
+    width:81.5%;
+    float: left;    
+    overflow: scroll;
+    height: 100%;
+}
+
+ul,ul li{
+    list-style-type: none;    
+}
+
+dd.topic_middle{
+    width:600px;
+}
+dd.topic_middle input.btn{
+    float: right;
+}
+
+
+dl.topic_hot_list{
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+.topic_hot_list dt, .topic_hot_list dd{
+    float: left;
+    font-size: 14px;
+}
+dd ul{
+    margin:20px 0 0 0;
+}
+dd ul li{
+    line-height: 20px;
+}
+dd input.btn{
+    
+    margin-left: 10px;
+    margin-top: 10px;
+}
+dd input.btn-success{
+    padding: 4px 20px 4px;
+}
+dd i{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;    
+}
+dd i a{
+    color:#555;
+}
+dd ul li{
+    font-size: 13px;
+}
+dt img, .topic_head_logo img, .round_img{
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    width: 100px;
+    height: 100px;
+}
+.nav-tabs{
+    margin-bottom: 8px;
+}
+.nav-list img{
+    margin-bottom: 4px;
+    margin-right: 4px;    
+}
+.nav-list{
+    padding-left: 0;
+}
+}

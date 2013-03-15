@@ -1,0 +1,16 @@
+#encoding: utf-8
+<table class="table table-bordered">
+	<%= form_for [:admin,category], class: 'form-horizontal' do |f| -%>
+	  
+	
+	<tr><th>添加分类</th></tr>
+	
+	<tr>
+		<td><%= f.label :name,'名称' %></td>
+		<td><%= f.text_field :name %></td>
+	</tr>		
+	<tr>
+		<td colspan="2"><%= f.submit '提交', class: 'btn'%></td>
+	</tr>				
+	<% end -%>
+</table>

@@ -1,0 +1,33 @@
+#encoding: utf-8
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TuicoolClone|后台管理</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+  <body class="<%= controller_name %>">
+
+    <div class="container">
+
+      <form class="form-signin">
+      	<%= form_tag admin_login_path, :class => "form-signin" do %>
+      	  
+      	
+        <h2 class="form-signin-heading">欢迎登陆 推酷管理系统</h2>
+        <%= text_field_tag :username, params[:username], class: "input-block-level", placeholder: '用户名'%>
+        <%= password_field_tag :password, params[:password], class: "input-block-level", placeholder: '密码' %>
+        <!--<label class="checkbox">
+          <input type="checkbox" value="remember-me"> 记住我
+    	</label>-->
+        <%= submit_tag "登陆", :class => "btn btn-large btn-primary" %>
+        
+      <% end -%>
+
+    </div> <!-- /container -->
+
+
+  </body>
+</html>

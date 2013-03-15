@@ -1,0 +1,51 @@
+
+ 
+<div class="topic_main">
+	<div class="row-fluid">
+		
+		<div id="topic-list-container">
+		<ul class="sub-nav nav nav-pills">
+			<% topics.each do |t|%>
+			<li class="<%= 'active' if topic.id==t.id %>">
+				<%= link_to t.name, topic_path(t) %>
+			</li>
+			<% end %>
+				
+		</ul>
+		<% topic.articles.each do |article| %>
+			
+		
+		
+		<dl class="topic_hot_list">
+			
+				<dt><img src="./热门主题 - 推酷_files/10000000.png" alt="互联网" width="100" height="100"></dt>
+				<dd class="topic_middle">					
+					<i>
+						
+						<%= link_to article.category.name, category_path(article.category) %>
+					</i>								
+					
+					<ul>
+							<li>
+								<%= link_to article.title, article_path(article) %>
+								 &nbsp;&nbsp;
+								<span class="date_tip"><%= article.created_at %></span>
+							</li>
+							<li>
+								<a href="http://www.tuicool.com/articles/eeU3iy" target="_blank">互联网：3.15的重灾区？</a> &nbsp;&nbsp;
+								<span class="date_tip">03-15 23:56</span>
+							</li>
+					</ul>
+				</dd>
+
+				<dd class="follow">
+						<input type="button" class="my_follow btn btn-success" style="margin-top:12px;font-size:12px" value="+关注" id="my_follow" data_id="10000000">
+				</dd>
+				
+			
+		</dl>
+		<% end %>
+
+</div>
+
+	

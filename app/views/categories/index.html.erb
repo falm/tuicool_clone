@@ -1,0 +1,92 @@
+
+<div class="content">
+	<div class="container-fluid">  
+ 		<div class="row-fluid">
+			<div class="span9">
+				<ul class="nav nav-tabs" style="margin-bottom: 5px;">
+        			<li class="active">
+						<%= link_to '全部', categories_path %>
+    				</li>
+ 					<% categories.each do |category| %>
+ 						<li class=>
+ 							<%= link_to category.name, category_path(category) %>
+ 						</li>
+ 					<% end %>
+				</ul>
+				<div>
+					<span style="float:left;margin-top:10px;">
+						<h3>随便看看</h3>
+					</span>
+					<span style="float:right;">
+						<div class="btn-toolbar nav_checkbox" style="line-height:1px">
+
+			  
+						  <div class="btn-group">
+								<a class="btn dropdown-toggle" data-toggle="dropdown" href="http://www.tuicool.com/ah/#">
+									只含中文
+								<span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu">
+									<a href="http://www.tuicool.com/ah/0?lang=1">只含中文</a>
+									<a href="http://www.tuicool.com/ah/0?lang=0">中英混合</a>
+									<a href="http://www.tuicool.com/ah/0?lang=2">只含英文</a>
+								</ul>
+							</div>
+						</div>
+
+					</span>
+				</div>
+
+
+	<div class="list_article" >
+		<% articles.each do |article|%>
+	    <div class="single_fake">
+			<div class="single">
+				<div class="single_left">
+				<div class="article_title">
+					
+						
+					<%= link_to article.title, article_path(article) %>
+				</div>
+				<div class="article_cut">
+					业内期待和瞩目的三星新一代智能手机Galaxy S4今天终于在美国发布了，相信业内对此此次发布会和产品又会出现不同的点评，还是老样子，不过多产品点评，毕竟不同的用户有不同的体验，即便是所谓专家的观点，也未必能代表所有的用户，所以还是从产业和市场策略的角度来简单看看三星此次Galaxy S4的意义。
+				</div>
+					</div>
+						<div class="article_thumb">
+							<img width="160" height="100" src="css/随便看看 - 推酷_files/YRvAFr.jpg">
+						</div>
+			</div>
+	        <div class="tip">
+					<span class="cut cut28" style="display:inline">
+						<i class="icon-file icon"></i><%= article.from %>
+					</span>							
+				<span>
+					<i class="icon-time icon"></i>
+						<%= article.created_at %>
+				</span>
+				
+			</div>
+			
+		</div>
+		<% end %>
+	</div>
+
+	<div style="float:right;clear:both">
+		    <div class="pagination">
+	    <ul>
+	      <li class="prev disabled">
+	        <a href="http://www.tuicool.com/ah/#">上一页</a>
+	      </li>
+	      <li class="active">
+	        <a href="http://www.tuicool.com/ah/#">第1页</a>
+	      </li>
+	      <li class="next">
+	        <a href="http://www.tuicool.com/ah/0/1">下一页</a>
+	      </li>
+	    </ul>
+	  </div>
+	
+	</div>
+</div>
+</div>
+

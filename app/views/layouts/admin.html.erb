@@ -1,0 +1,73 @@
+#encoding: utf-8
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TuicoolClone|后台管理</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body id="<%= controller_name %>">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">推酷后台管理</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+              Logged in as <a href="#" class="navbar-link"><!-- current_admin.uesrname --></a>
+            </p>
+            <ul class="nav">
+              <li class="active"><%=  link_to '分类',admin_categories_path %></li>
+              <li><%=  link_to '文章',admin_articles_path %></li>
+              <li><%=  link_to '主题',admin_topics_path %></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    
+	<div class="container-fluid">
+		<% if flash[:notice]%>
+		<div class="alert alert-info">
+      		<%= flash[:notice] %>
+      		<a class="close" data-dismiss="alert">×</a>
+		</div>
+		<% end %>
+      <div class="row-fluid">
+
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Sidebar</li>
+              <li class="active"><%= yield :add %></li>
+              <li><a href="#">Link</a></li>	
+              <li class="nav-header">Sidebar</li>
+              <li><%= link_to "注销", admin_logout_path %></li>
+
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+
+		
+
+        <div class="span9">
+          	<%= yield %>
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <p>&copy; 推酷 2013</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+
+</body>
+</html>

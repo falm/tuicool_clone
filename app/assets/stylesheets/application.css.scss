@@ -1,0 +1,175 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+ *= require bootstrap
+ *= require jquery.ui.core
+ *= require jquery.ui.theme
+ *= require dataTables/src/demo_table_jui
+*/
+
+
+
+
+body.application{
+
+	
+
+//about
+#about {
+	width:940px;
+	margin:0px auto;
+}
+
+#about p{
+	font-size:16px;
+	line-height:150%;
+}
+
+
+
+
+	
+
+
+input#inputEmail, input#inputPassword{
+	width: 70%;
+}
+i{
+	font-style:normal;
+}
+.main-container{
+	width:940px;
+	height:auto;
+	margin:0px auto;
+	margin-top:50px;		
+}
+.top{
+
+}
+.top .left{
+	width:60%;
+	height:177px;	
+	float:left;
+	background-color: #DCEAF4;
+}
+.top .right{
+	width:38.5%;	
+	float:left;
+	margin-left: 10px;
+	padding-top: 20px;
+	background-color: #DCEAF4;
+}
+.bottom .left{
+	width:60%;
+	float:left;
+}
+.bottom .right{
+	float:left;
+	margin-left: 10px;
+
+}
+.desc{
+	width:95%;
+	height:15%;
+	font-size: 16px;
+	text-indent: 2em;
+	border: 1px solid #E2EEE2;
+	border-left:0;
+}
+.welcome{
+	
+}
+.desc_img{
+	float: left;
+	width:130px;
+	height:130px;
+	margin-left:20px;
+	padding-top:10px;
+}
+.desc div{
+
+	padding-top: 20px;
+	padding-left: 20px;
+	letter-spacing:3px;
+}
+.control-group .controls{
+	margin-left: 40px;
+}
+.form-horizontal .control-label{
+	width:auto;
+}
+.checkbox a{
+	margin-left: 20px;	
+	font-size: 11px;
+}
+.article_list{
+	width:96%;
+	margin-top:30px;
+}
+.article_list .single{
+	min-height:55px;
+	margin-top:10px;
+	border-bottom:1px solid #ddd;	
+}
+.article_list h3, .topics h3{	
+	border-bottom:1px solid #ddd;
+}
+.topics h3{
+	margin-bottom: 8px;
+}
+.article_list h3 a, .topics h3 a{
+	color:#333;
+	width:100%;		
+}
+img.topic_img{
+	width:60px;
+	height:60px;
+	margin: 2px 2px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+}
+.topic_title{
+	text-align:center;
+}
+.topics{
+	width:360px;
+	height:100%;
+	margin-top: 30px;
+}
+
+.topics .single{
+	width:65px;
+	height:65px;
+	padding:0 3px;
+	margin-bottom:25px;
+	margin-right:19px;
+	float:left;
+	overflow:visible;
+}
+.btn_login{
+	margin-right:30px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.login_frm{
+	margin-left:30px;
+}
+.article_list .title{
+	font-size:18px;
+	font-weight:normal;
+	color:#555;
+}
+.article_list .stamp{
+	color:#9E9E9E;
+	margin-top:10px;
+	margin-top:5px;
+}
+	
+
+
+	
+}
+

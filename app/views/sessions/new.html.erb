@@ -1,0 +1,17 @@
+    <div class="container">
+
+      <form class="form-signin">
+      	<%= form_tag login_path, :class => "form-signin" do %>
+      	  
+      	
+        <h2 class="form-signin-heading">登陆 </h2>
+        <%= text_field_tag :username, params[:username], class: "input-block-level", placeholder: '用户名'%>
+        <%= password_field_tag :password, params[:password], class: "input-block-level", placeholder: '密码' %>
+        <!--<label class="checkbox">
+          <input type="checkbox" value="remember-me"> 记住我
+    	</label>-->
+        <%= submit_tag "登陆", :class => "btn btn-large btn-primary" %>
+       	<%= button_tag "申请内测", :class => "btn btn-large" %>
+      <% end -%>
+
+    </div> <!-- /container -->

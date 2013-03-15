@@ -1,0 +1,31 @@
+
+<h1>文章管理</h1>
+<table id="articles" class="display">
+	<thead>
+		<tr>
+        	<td>ID</td>
+        	<td>标题</td>
+        	<td>来自</td>
+        	<td></td>
+        	<td></td>
+        	<td></td>
+      	</tr>
+    </thead>
+    <tbody>
+    	<% articles.each do |article|%>
+      	<tr>
+      		<td><%= article.id %></td>
+	        <td><%= article.title %></td>
+	        <td><%= article.from %></td>
+	        <td><%= link_to "Show", admin_article_path(article) %></td>
+	        <td><%= link_to "Edit", edit_admin_article_path(article) %></td>
+	        <td><%= link_to "Destory", admin_article_path(article), method: :delete%></td>
+	      </tr>
+	    <% end %>
+	</tbody>
+
+</table>
+
+<%= content_for :add do %>
+	<%= link_to "添加", new_admin_article_path %>
+<% end %>

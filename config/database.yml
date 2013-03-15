@@ -1,0 +1,9 @@
+
+
+development:
+  adapter: mysql
+  database: tuicool_clone
+  username: root
+  password: jay
+  host:		localhost
+  encoding: utf8

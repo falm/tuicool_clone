@@ -1,0 +1,54 @@
+
+ 
+<div class="topic_main">
+	<div class="row-fluid">
+		
+		<div id="topic-list-container">
+		<ul class="sub-nav nav nav-pills">
+			<% topics.each do |topic|%>
+			<li>
+				<%= link_to topic.name, topic_path(topic) %>
+			</li>
+			<% end %>
+				
+		</ul>
+		<% articles.each do |article| %>
+			
+		
+		
+		<dl class="topic_hot_list">
+			
+				<dt><img src="./热门主题 - 推酷_files/10000000.png" alt="互联网" width="100" height="100"></dt>
+				<dd class="topic_middle">					
+					<i>
+						
+						<%= link_to article.category.name, category_path(article.category) %>
+					</i>								
+					
+					<ul>
+							<li>
+								<a href="http://www.tuicool.com/articles/NRfyiu" target="_blank">央视3.15晚会关注网络安全 网易公司等遭曝光</a> &nbsp;&nbsp;
+								<span class="date_tip">03-16 00:05</span>
+							</li>
+							<li>
+								<a href="http://www.tuicool.com/articles/eeU3iy" target="_blank">互联网：3.15的重灾区？</a> &nbsp;&nbsp;
+								<span class="date_tip">03-15 23:56</span>
+							</li>
+							<li>
+								<a href="http://www.tuicool.com/articles/iEN7Rf" target="_blank">奥本海默：淘米网利润率面临压力 未来或被收购</a> &nbsp;&nbsp;
+								<span class="date_tip">03-15 23:44</span>
+							</li>
+					</ul>
+				</dd>
+
+				<dd class="follow">
+						<input type="button" class="my_follow btn btn-success" style="margin-top:12px;font-size:12px" value="+关注" id="my_follow" data_id="10000000">
+				</dd>
+				
+			
+		</dl>
+		<% end %>
+
+</div>
+
+	
