@@ -13,54 +13,67 @@
 			</div>
 		</div>	
 	</div>
-	<div class="right">		
+	<div class="right">	
+		<% unless current_user %>	
 		<div class="login_frm">
-			<form action="http://www.tuicool.com/login" method="post" class="form-horizontal">
+			
+			<%= form_tag sessions_path, :class => "form-horizontal" do %>
+			  
+			
 			  <div class="control-group" style="margin-bottom: 10px;">
 				<label class="control-label" for="inputEmail">账号</label>
 				<div class="controls">
-				  <input type="email" id="inputEmail" name="email" placeholder="账号">
+				  <%= text_field_tag :username, params[:username],  placeholder: "账号"%>
 				</div>
 			  </div>
 			  <div class="control-group" style="margin-bottom:0;">
 				<label class="control-label" for="inputPassword">密码</label>
 				<div class="controls">
-				  <input type="password" id="inputPassword" name="password" placeholder="密码">
+				  <%= text_field_tag :password, params[:password],  placeholder: "密码"%>
 				</div>
 			  </div>
 			  <div class="control-group">
 				<div class="controls">
 				  <label class="checkbox">
 						<input type="checkbox" name="remember" value="1" checked="true"> 记住我
-						<a href="http://www.tuicool.com/settings/missing_pwd" target="_blank">忘记密码?</a>
+						<%= link_to '忘记密码?'%>
 				  </label>
-				  <button type="submit" class="btn btn-primary btn_login">登 录</button>
-				  <a href="http://www.tuicool.com/invite/" class="btn">注册新用户</a>
+				  
+				  <%= submit_tag '登 录', :class => 'btn btn-primary btn_login' %>
+				  <%= link_to '注册新用户', :class => 'btn' %>
 				</div>
 			  </div>
-			</form>
+			<% end -%>
 		</div>
+
+		<% end %>
 	</div>
 </div>
 <div class="bottom">
 	<div class="left">
 		<div class="article_list">
-			<h3><a href="http://www.tuicool.com/ah/">热门文章</a></h3>
+			<h3><%= link_to '热门文章', categories_path %></h3>
+			<% articles.each do |article| %>
+				
 				<div class="single">
-					<div class="title"><a href="http://www.tuicool.com/articles/euAZba" target="_blank" title="糯米网将投5000万美元换三倍扩张规模">糯米网将投5000万美元换三倍扩张规模</a></div>				
-					<div class="stamp">TechWeb 经营 RSS阅读  推荐时间:03-15 11:21</div>
+					<div class="title"><%= link_to article.title, article_path(article)%></div>				
+					<div class="stamp"><%= article.from %>  推荐时间:<%= article.created_at %></div>
 				</div>	
+			<% end %>
 		</div>
 	</div>
-	<div class="right">
+	<div class="right">	
 		<div class="topics">
-			<h3><a href="http://www.tuicool.com/topics">热门主题</a></h3>
+			<h3><%= link_to '热门主题', topics_path %></h3>
+			<% topics.each do |topic| %>
 			<div class="single">
 				<a href="http://www.tuicool.com/topics/10000006" target="_blank">
 					<img src="img/001.png" class="topic_img">	
-					<div class="topic_title">社交网络</div>
+					<div class="topic_title"><%= topic.name %></div>
 				</a>
+				
 			</div>
+			<% end %>
 		</div>
 	</div>
 </div>

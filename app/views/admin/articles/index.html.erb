@@ -17,9 +17,9 @@
       		<td><%= article.id %></td>
 	        <td><%= article.title %></td>
 	        <td><%= article.from %></td>
-	        <td><%= link_to "Show", admin_article_path(article) %></td>
-	        <td><%= link_to "Edit", edit_admin_article_path(article) %></td>
-	        <td><%= link_to "Destory", admin_article_path(article), method: :delete%></td>
+	        <td><%= link_to "显示", admin_article_path(article) %></td>
+	        <td><%= link_to "编辑", edit_admin_article_path(article) %></td>
+	        <td><%= link_to "修改", admin_article_path(article), method: :delete%></td>
 	      </tr>
 	    <% end %>
 	</tbody>

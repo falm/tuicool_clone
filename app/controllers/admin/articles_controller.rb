@@ -1,6 +1,6 @@
 class Admin::ArticlesController < AdminController
 	
-	expose(:articles)
+	expose(:articles){ Article.order("id desc") }
 	expose(:article)
 	expose(:categories)
 	expose(:topics)

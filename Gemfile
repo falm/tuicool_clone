@@ -28,6 +28,7 @@ end
 gem 'jquery-rails'
 gem 'decent_exposure'
 gem 'rails_kindeditor', '~> 0.3.12'
+gem 'impressionist'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

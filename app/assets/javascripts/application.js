@@ -7,7 +7,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require kindeditor
-//= #require twitter/bootstrap
 //= require bootstrap
 //= require_tree .
 //= require dataTables/jquery.dataTables
+//= #require_directroy bootstarp
+//= require_self
+

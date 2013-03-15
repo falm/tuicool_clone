@@ -16,7 +16,7 @@ TuicoolClone::Application.routes.draw do
 	resources :articles, :only => [:show] 
 	resources :topics, :only => [:index, :show]
 	resources :categories, :only => [:index, :show]
-	resources :sessions, :only => [:index, :show]
+	resources :sessions, :only => [:create]
 	resources :users, :only => [:create]
 	
 	namespace :admin do

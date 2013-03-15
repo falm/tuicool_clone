@@ -21,13 +21,20 @@
         </h3>
 		<div class="nav-collapse">
 		  <ul class="nav">
-		  	<li><%=  link_to '文章',categories_path %></li>
-            <li><%=  link_to '主题',topics_path %></li>
+		  		<li><%=  link_to '文章',categories_path %></li>
+            	<li><%=  link_to '主题',topics_path %></li>
 	      </ul>
           <ul class="nav pull-right">
           	<% if current_user %>
-          		<li><%=  current_user.username %></li>
-          		<li><%=  link_to '退出', logout_path %></li>
+				<li >
+				
+                  <%= link_to current_user.username %>
+          
+            	</li>
+            	<li>
+            		<%= link_to '退出', logout_path %>
+            	</li>
+	        		
           	<% else %>
           		<li><%=  link_to '登陆', login_path %></li>
           	<% end %>
@@ -39,7 +46,11 @@
   <div id ="flash_container" class="noPrint">    
     <!-- <a href='#'' class='close' data-dismiss='alert'>×</a> -->
   </div>
-<%= flash[:notice] %>
+	<% if flash[:notice]%>
+		<div class="alert alert-info">
+      		<%= flash[:notice] %>
+		</div>
+		<% end %>
 <%= yield %>
 
 <div class="footer">
